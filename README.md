@@ -13,8 +13,11 @@ O design permite adicionar novos agentes, mudar modelos, ajustar prompts e escal
 📂 Estrutura do Projeto:
 .
 ├── .git/
-       ├── Workflows/ci.yml
-├── venv/ (Geral)
+│   └── Workflows/
+│       └── ci.yml        # GitHub Actions para validação automática
+│
+├── venv/
+│
 ├── data/
 │   ├── samples/
 │   └── outputs/
@@ -38,11 +41,13 @@ O design permite adicionar novos agentes, mudar modelos, ajustar prompts e escal
 │   │   └── __init__.py
 │   │
 │   ├── agents/
-│   │   ├── registry.py
+│   │   ├── registry.py   # Registro plugável de agentes (modelo CrewAI/LangChain)
 │   │   └── __init__.py
 │   │
 │   ├── tools/
-│   │   └── llm_client.py
+│   │   ├── llm_client.py     # Cliente LLM desacoplado
+│   │   ├── embeddings.py     # Embeddings centralizados (RAG future-proof)
+│   │   └── vector_store.py   # Base para armazenamento vetorial
 │   │
 │   └── utils/
 │       ├── io.py
@@ -55,6 +60,7 @@ O design permite adicionar novos agentes, mudar modelos, ajustar prompts e escal
 │   └── test_report_builder.py
 │
 └── README.md
+
 
 ⚙️ Como Funciona o Pipeline
 1. Entrada
@@ -131,6 +137,15 @@ Fácil adicionar:
 -pipeline async
 -integração com banco de dados
 -ingestão automática de CSV, CRM, API etc.
+
+🔄 CI/CD com GitHub Actions
+-O projeto já está configurado para:
+-rodar testes automáticos (pytest)
+-checar lint/style
+-validar instalação e imports
+-prevenir regressões
+
+Isso garante que cada merge no repositório mantenha o pipeline íntegro e funcional.
 
 🎯 Por que essa arquitetura demonstra Seriedade
 -Modulação clara (SRP).
