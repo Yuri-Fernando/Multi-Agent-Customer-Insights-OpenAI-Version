@@ -6,7 +6,7 @@ Arquitetura extensível, plugável e organizada de forma profissional para demon
 
 ---
 
-## 📌 Objetivo do Projeto
+##  Objetivo do Projeto
 
 Criar um pipeline de IA capaz de:
 
@@ -19,7 +19,7 @@ O design permite adicionar novos agentes, trocar modelos, ajustar prompts e esca
 
 ---
 
-## 📂 Estrutura do Projeto
+##  Estrutura do Projeto
 
 ```text
 .
@@ -72,8 +72,8 @@ O design permite adicionar novos agentes, trocar modelos, ajustar prompts e esca
 │
 └── README.md
 
-⚙️ Como Funciona o Pipeline:
-1️⃣ Entrada
+## Como Funciona o Pipeline:
+ Entrada
 Objeto JSON ou dicionário Python com dados do cliente:
 {
   "name": "Maria Silva",
@@ -84,7 +84,7 @@ Objeto JSON ou dicionário Python com dados do cliente:
   "history": "Atrasos ocasionais, bom relacionamento"
 }
 
-2️⃣ Orquestrador
+ Orquestrador
 O Orchestrator distribui o payload entre os agentes:
 results = orchestrator.run(customer)
 
@@ -94,7 +94,7 @@ Retorno esperado:
   "analysis": "...",
   "strategy": "..."
 }
-3️⃣ Agentes Especializados
+ Agentes Especializados
 | Agente            | Função                                           | Arquivo             |
 | ----------------- | ------------------------------------------------ | ------------------- |
 | **ResearchAgent** | Analisa padrões, comportamento e sinais de churn | `research_agent.py` |
@@ -104,7 +104,7 @@ Retorno esperado:
 Todos herdam de:
 core/base_agent.py
 
-📐 Diagrama de Fluxo (ASCII):
+ Diagrama de Fluxo (ASCII):
                      +---------------------+
                      |  Customer Payload   |
                      +----------+----------+
@@ -132,7 +132,8 @@ core/base_agent.py
                                               +----------------------+
                                               | Final Structured PDF |
                                               +----------------------+
-🧩 Extensibilidade
+
+Extensibilidade
 Fácil adicionar:
 Novos agentes (FinanceAgent, RiskAgent, PersonaAgent)
 Templates diferentes de relatório
@@ -141,7 +142,7 @@ Pipeline assíncrono
 Integração com banco de dados
 Ingestão automática de CSV, CRM ou APIs
 
-🔄 CI/CD com GitHub Actions
+CI/CD com GitHub Actions
 O projeto já está configurado para:
 Rodar testes automáticos (pytest)
 Validar lint e estilo
@@ -150,7 +151,7 @@ Prevenir regressões em cada merge
 
 Isso garante que o pipeline permaneça íntegro, confiável e reproduzível.
 
-🎯 Por que essa Arquitetura Demonstra Seriedade
+Por que essa Arquitetura Demonstra Seriedade
 Separação clara de responsabilidades (SRP)
 Agentes isolados, substituíveis e testáveis
 Orquestração centralizada
