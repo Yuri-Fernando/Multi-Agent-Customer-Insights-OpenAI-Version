@@ -18,7 +18,6 @@ Criar um pipeline de IA capaz de:
 O design permite adicionar novos agentes, trocar modelos, ajustar prompts e escalar o pipeline **sem alterar o código principal**.
 
 ---
----
 
 ## Diagrama de Fluxo (ASCII):
                      +---------------------+
@@ -47,8 +46,10 @@ O design permite adicionar novos agentes, trocar modelos, ajustar prompts e esca
                                                          v
                                               +----------------------+
 
-                                             | Final Structured PDF |
+                                              | Final Structured PDF |
                                               +----------------------+
+
+                                              
 ---
 
 ## Extensibilidade
