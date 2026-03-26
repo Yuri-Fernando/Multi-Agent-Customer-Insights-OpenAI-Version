@@ -21,34 +21,34 @@ O design permite adicionar novos agentes, trocar modelos, ajustar prompts e esca
 
 ## Extensibilidade
 Fácil adicionar:
-Novos agentes (FinanceAgent, RiskAgent, PersonaAgent)
-Templates diferentes de relatório
-Outro cliente LLM
-Pipeline assíncrono
-Integração com banco de dados
-Ingestão automática de CSV, CRM ou APIs
+- Novos agentes (FinanceAgent, RiskAgent, PersonaAgent)
+- Templates diferentes de relatório
+- Outro cliente LLM
+- Pipeline assíncrono
+- Integração com banco de dados
+- Ingestão automática de CSV, CRM ou APIs
 
 ---
 
 ## CI/CD com GitHub Actions
-O projeto já está configurado para:
-Rodar testes automáticos (pytest)
-Validar lint e estilo
-Verificar imports e dependências
-Prevenir regressões em cada merge
-Isso garante que o pipeline permaneça íntegro, confiável e reproduzível.
+- O projeto já está configurado para:
+- Rodar testes automáticos (pytest)
+- Validar lint e estilo
+- Verificar imports e dependências
+- Prevenir regressões em cada merge
+- Isso garante que o pipeline permaneça íntegro, confiável e reproduzível.
 
 ---
 
 ## Por que essa Arquitetura Demonstra Seriedade? 
-Separação clara de responsabilidades (SRP)
-Agentes isolados, substituíveis e testáveis
-Orquestração centralizada
-LLM desacoplado da lógica de negócio
-Estrutura realista de projeto (src, tests, utils)
-Registro plugável de agentes
-Report Builder transforma saída bruta em entrega utilizável
-Código fácil de manter e escalar
+- Separação clara de responsabilidades (SRP)
+- Agentes isolados, substituíveis e testáveis
+- Orquestração centralizada
+- LLM desacoplado da lógica de negócio
+- Estrutura realista de projeto (src, tests, utils)
+- Registro plugável de agentes
+- Report Builder transforma saída bruta em entrega utilizável
+- Código fácil de manter e escalar
 
 ---
 
