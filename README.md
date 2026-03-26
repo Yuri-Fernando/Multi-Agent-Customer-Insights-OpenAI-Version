@@ -16,40 +16,7 @@ Criar um pipeline de IA capaz de:
 - Gerar um relatório final pronto para análise  
 
 O design permite adicionar novos agentes, trocar modelos, ajustar prompts e escalar o pipeline **sem alterar o código principal**.
-
----
-
-## Diagrama de Fluxo (ASCII):
-                     +---------------------+
-                     |  Customer Payload   |
-                     +----------+----------+
-                                |
-                                v
-                     +---------------------+
-                     |     Orchestrator    |
-                     +----------+----------+
-                                |
-        -------------------------------------------------
-        |                       |                       |
-        v                       v                       v
-+---------------+      +----------------+      +------------------+
-| ResearchAgent |      | AnalysisAgent  |      | StrategyAgent     |
-+-------+-------+      +-------+--------+      +---------+--------+
-        |                      |                         |
-        ------------------------                         |
-                       |                                 |
-                       v                                 v
-                 +------------------+          +---------------------+
-                 |  Aggregated Dict | -------> |   Report Builder    |
-                 +------------------+          +-----------+---------+
-                                                         |
-                                                         v
-                                              +----------------------+
-
-                                              | Final Structured PDF |
-                                              +----------------------+
-
-                                              
+                                           
 ---
 
 ## Extensibilidade
