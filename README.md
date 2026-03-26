@@ -104,7 +104,7 @@ Retorno esperado:
 Todos herdam de:
 core/base_agent.py
 
- Diagrama de Fluxo (ASCII):
+## Diagrama de Fluxo (ASCII):
                      +---------------------+
                      |  Customer Payload   |
                      +----------+----------+
@@ -133,7 +133,7 @@ core/base_agent.py
                                               | Final Structured PDF |
                                               +----------------------+
 
-Extensibilidade
+## Extensibilidade
 Fácil adicionar:
 Novos agentes (FinanceAgent, RiskAgent, PersonaAgent)
 Templates diferentes de relatório
@@ -142,16 +142,15 @@ Pipeline assíncrono
 Integração com banco de dados
 Ingestão automática de CSV, CRM ou APIs
 
-CI/CD com GitHub Actions
+## CI/CD com GitHub Actions
 O projeto já está configurado para:
 Rodar testes automáticos (pytest)
 Validar lint e estilo
 Verificar imports e dependências
 Prevenir regressões em cada merge
-
 Isso garante que o pipeline permaneça íntegro, confiável e reproduzível.
 
-Por que essa Arquitetura Demonstra Seriedade
+## Por que essa Arquitetura Demonstra Seriedade? 
 Separação clara de responsabilidades (SRP)
 Agentes isolados, substituíveis e testáveis
 Orquestração centralizada
